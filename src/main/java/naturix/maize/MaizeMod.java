@@ -1,15 +1,23 @@
 package naturix.maize;
 
+import java.util.ArrayList;
+
 import org.apache.logging.log4j.Logger;
 
 import naturix.maize.proxy.CommonProxy;
 import naturix.maize.registry.ModBlocks;
+import naturix.maize.registry.ModItems;
+import naturix.maize.registry.ModRecipes;
+import naturix.maize.registry.ModSeeds;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockTallGrass;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -33,20 +41,28 @@ public class MaizeMod
     
     @Mod.Instance(MODID)
 	public static MaizeMod instance;
+    public static final CreativeTabs maizetab = new CreativeTabs("tabmaize")
+    {
 
+        @Override
+		@SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem()
+        {
+            return new ItemStack(ModItems.cornSeed);
+        }
+		
+    };
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println(NAME + " is loading!");
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
-		
+		ModRecipes.init();
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
-
 	}
 	@Mod.EventBusSubscriber
 	public static class RegistrationHandler {
@@ -54,26 +70,18 @@ public class MaizeMod
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
 			ModBlocks.registerItemBlocks(event.getRegistry());
+			ModItems.register(event.getRegistry());
 		}
 		@SubscribeEvent
 		public static void registerItems(ModelRegistryEvent event) {
 			ModBlocks.registerModels();
+			ModItems.registerModels();
 			
 		}
 		@SubscribeEvent
 		public static void registerBlocks(RegistryEvent.Register<Block> event) {
 			ModBlocks.register(event.getRegistry());
 		}
-	}
-	public static final CreativeTabs maizetab = new CreativeTabs("tabmaize")
-    {
 
-        @Override
-		@SideOnly(Side.CLIENT)
-        public ItemStack getTabIconItem()
-        {
-            return new ItemStack(ModBlocks.maize);
-        }
-		
-    };
+}
 }

@@ -1,3 +1,6 @@
-item.corn.name=Corn
+item.corn_seeds.name=Corn Seed
 itemGroup.tabmaize=Maize
 tile.crop_maize.name=Maize
+item.corn.name=Corn
+item.bread_maize.name=Maize Infused Bread
+item.corn_flour.name=Corn Flour

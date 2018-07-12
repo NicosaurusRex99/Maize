@@ -1,6 +1,7 @@
 package naturix.maize.blocks;
 
 import naturix.maize.MaizeMod;
+import naturix.maize.registry.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockCrops;
 import net.minecraft.block.material.Material;
@@ -29,21 +30,13 @@ public class MaizeCrop extends BlockCrops {
 	public Item createItemBlock() {
 		return new ItemBlock(this).setRegistryName(getRegistryName());
 	}
-	
-	@Override
-	public MaizeCrop setCreativeTab(CreativeTabs tab) {
-		super.setCreativeTab(MaizeMod.maizetab);
-		return this;
-	}
 	@Override
 	protected Item getSeed() {
-		return Items.WHEAT_SEEDS;
-		//return ModItems.cornSeed;
+		return ModItems.cornSeed;
 	}
 	
 	@Override
 	protected Item getCrop() {
-		return Items.WHEAT;
-		//return ModItems.corn;
+		return ModItems.corn;
 	}
 }
