@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
@@ -22,11 +23,7 @@ public class CommonProxy {
     public void postInit(FMLPostInitializationEvent e) {
     }
 
-    @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {
-    }
-
-    @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {
-    }
+    @SideOnly(Side.CLIENT)
+	public void registerItemRenderer(Item item, int meta, String id) {
+	}
 }

@@ -1,0 +1,56 @@
+{
+    "forge_marker": 1,
+    "defaults": {
+        "model": "cross"
+    },
+    "variants": {
+    "normal": {
+            "model": "maize:blocks/crop_maize"
+        },
+        "inventory": {
+            "model": "maize:blocks/crop_maize"
+        },
+        "age": {
+            "0": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize"
+                }
+            },
+            "1": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize1"
+                }
+            },
+            "2": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize2"
+                }
+            },
+            "3": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize3"
+                }
+            },
+            "4": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize4"
+                }
+            },
+            "5": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize5"
+                }
+            },
+            "6": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize6"
+                }
+            },
+            "7": {
+                "textures": {
+                    "cross": "maize:blocks/crop_maize7"
+                }
+            }
+        }
+    }
+}
