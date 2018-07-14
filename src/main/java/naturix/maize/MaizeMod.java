@@ -23,12 +23,13 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-@Mod(modid = MaizeMod.MODID, name = MaizeMod.NAME, version = MaizeMod.VERSION)
+@Mod(modid = MaizeMod.MODID, name = MaizeMod.NAME, version = MaizeMod.VERSION, updateJSON = MaizeMod.UPDATE_URL)
 public class MaizeMod
 {
     public static final String MODID = "maize";
     public static final String NAME = "Maize Mod";
     public static final String VERSION = "1.12.2.0";
+    public static final String UPDATE_URL = "https://raw.githubusercontent.com/NicosaurusRex99/Maize/master/maize_update.json";
 
     private static Logger logger;
     
