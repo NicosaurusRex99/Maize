@@ -1,8 +1,10 @@
 package naturix.maize.proxy;
 
-import naturix.maize.registry.ModSeeds;
+import naturix.maize.registry.ModItems;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
@@ -17,9 +19,7 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent e) {
     }
 
-    public void init(FMLInitializationEvent e) {
-    	onBlocksAndItemsLoaded();
-    }
+    public void init(FMLInitializationEvent e) {}
 
     public void postInit(FMLPostInitializationEvent e) {
     }
@@ -27,7 +27,4 @@ public class CommonProxy {
     @SideOnly(Side.CLIENT)
 	public void registerItemRenderer(Item item, int meta, String id) {
 	}
-    public void onBlocksAndItemsLoaded() {
-		ModSeeds.getSeedDrops();
-    }
 }

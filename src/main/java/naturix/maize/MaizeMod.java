@@ -1,23 +1,19 @@
 package naturix.maize;
 
-import java.util.ArrayList;
-
 import org.apache.logging.log4j.Logger;
 
 import naturix.maize.proxy.CommonProxy;
 import naturix.maize.registry.ModBlocks;
 import naturix.maize.registry.ModItems;
+import naturix.maize.registry.ModOreDict;
 import naturix.maize.registry.ModRecipes;
-import naturix.maize.registry.ModSeeds;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockTallGrass;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -59,6 +55,8 @@ public class MaizeMod
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		ModRecipes.init();
+		ModOreDict.initOreDict();
+        MinecraftForge.addGrassSeed(new ItemStack(ModItems.cornSeed, 1, 0), 10);
 	}
 
 	@Mod.EventHandler
