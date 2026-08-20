@@ -1,0 +1,11 @@
+{
+  "block.maizemod.maize_crop": "Maize Crop",
+  "item.maizemod.corn": "Corn",
+  "item.maizemod.corn_bread": "Corn Bread",
+  "item.maizemod.corn_flour": "Corn Flour",
+  "item.maizemod.corn_seed": "Corn Seeds",
+  "itemGroup.maize": "Mod ข้าวโพด",
+  "maizemod.configuration.section.maizemod.common.title": "การกำหนดค่า Mod ของข้าวโพด",
+  "maizemod.configuration.section.maizemod.common.toml.title": "การกำหนดค่า Mod ของข้าวโพด",
+  "maizemod.configuration.title": "การกำหนดค่า Mod ของข้าวโพด"
+}

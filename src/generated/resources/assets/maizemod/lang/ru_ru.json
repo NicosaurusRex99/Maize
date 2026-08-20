@@ -1,0 +1,11 @@
+{
+  "block.maizemod.maize_crop": "Maize Crop",
+  "item.maizemod.corn": "Corn",
+  "item.maizemod.corn_bread": "Corn Bread",
+  "item.maizemod.corn_flour": "Corn Flour",
+  "item.maizemod.corn_seed": "Corn Seeds",
+  "itemGroup.maize": "Кукурузный мод",
+  "maizemod.configuration.section.maizemod.common.title": "Конфигурации мода Maize",
+  "maizemod.configuration.section.maizemod.common.toml.title": "Конфигурации мода Maize",
+  "maizemod.configuration.title": "Конфигурации мода Maize"
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "experience": 0.2,
+  "ingredient": "maizemod:corn_flour",
+  "result": {
+    "id": "maizemod:corn_bread"
+  }
+}

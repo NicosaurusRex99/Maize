@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "maizemod:block/maize_crop_stage6"
+  }
+}

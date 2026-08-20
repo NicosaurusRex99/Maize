@@ -1,0 +1,11 @@
+{
+  "block.maizemod.maize_crop": "Maize Crop",
+  "item.maizemod.corn": "Corn",
+  "item.maizemod.corn_bread": "Corn Bread",
+  "item.maizemod.corn_flour": "Corn Flour",
+  "item.maizemod.corn_seed": "Corn Seeds",
+  "itemGroup.maize": "玉米模组",
+  "maizemod.configuration.section.maizemod.common.title": "玉米模组配置",
+  "maizemod.configuration.section.maizemod.common.toml.title": "玉米模组配置",
+  "maizemod.configuration.title": "玉米模组配置"
+}
